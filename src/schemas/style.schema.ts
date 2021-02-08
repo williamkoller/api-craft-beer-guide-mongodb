@@ -5,9 +5,6 @@ export class Style {
   @Prop({ type: String, required: true })
   name: string;
 
-  @Prop({ type: String })
-  category: string;
-
   @Prop({ type: Date, default: Date.now })
   createdAt: Date;
 
