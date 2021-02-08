@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Style, StyleSchema } from '@/schemas/style.schema';
-import { AddStyleRepository } from '@/style/repositories/add-style/add-style-repository';
+import { AddStyleRepository } from '@/style/repositories/add-style/add-style.repository';
 import { LoadAllStyleRepository } from '@/style/repositories/load-style/load-all-style.repository';
 
 @Module({
