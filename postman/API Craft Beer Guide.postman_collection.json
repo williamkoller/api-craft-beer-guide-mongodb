@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "b734c038-e993-4168-8451-01236b235445",
+		"name": "API Craft Beer Guide",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Style",
+			"item": [
+				{
+					"name": "Load All Style",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/style",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"style"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/style/ame",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"style",
+								"ame"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Style",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"GERMAN WHEAT BEER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/style",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"style"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
