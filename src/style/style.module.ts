@@ -5,6 +5,8 @@ import { AddStyleRepository } from '@/style/repositories/add-style/add-style.rep
 import { LoadAllStyleRepository } from '@/style/repositories/load-style/load-all-style.repository';
 import { LoadAllStyleService } from '@/style/services/load-all/load-all-style.service';
 import { LoadAllStyleController } from '@/style/controllers/load-all/load-all-style.controller';
+import { AddStyleService } from '@/style/services/add-style/add-style.service';
+import { AddStyleController } from '@/style/controllers/add-style/add-style.controller';
 
 @Module({
   imports: [
@@ -15,7 +17,12 @@ import { LoadAllStyleController } from '@/style/controllers/load-all/load-all-st
       },
     ]),
   ],
-  providers: [AddStyleRepository, LoadAllStyleRepository, LoadAllStyleService],
-  controllers: [LoadAllStyleController],
+  providers: [
+    AddStyleRepository,
+    LoadAllStyleRepository,
+    LoadAllStyleService,
+    AddStyleService,
+  ],
+  controllers: [LoadAllStyleController, AddStyleController],
 })
 export class StyleModule {}
