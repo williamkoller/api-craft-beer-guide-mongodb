@@ -7,6 +7,9 @@ import { LoadAllStyleService } from '@/style/services/load-all/load-all-style.se
 import { LoadAllStyleController } from '@/style/controllers/load-all/load-all-style.controller';
 import { AddStyleService } from '@/style/services/add-style/add-style.service';
 import { AddStyleController } from '@/style/controllers/add-style/add-style.controller';
+import { LoadStyleByNameRepository } from '@/style/repositories/load-style-by-name/load-style-by-name.repository';
+import { LoadStyleByNameService } from '@/style/services/load-style-by-name/load-style-by-name.service';
+import { LoadStyleByNameController } from '@/style/controllers/load-style-by-name/load-style-by-name.controller';
 
 @Module({
   imports: [
@@ -19,10 +22,16 @@ import { AddStyleController } from '@/style/controllers/add-style/add-style.cont
   ],
   providers: [
     AddStyleRepository,
+    AddStyleService,
     LoadAllStyleRepository,
     LoadAllStyleService,
-    AddStyleService,
+    LoadStyleByNameRepository,
+    LoadStyleByNameService,
   ],
-  controllers: [LoadAllStyleController, AddStyleController],
+  controllers: [
+    LoadAllStyleController,
+    AddStyleController,
+    LoadStyleByNameController,
+  ],
 })
 export class StyleModule {}

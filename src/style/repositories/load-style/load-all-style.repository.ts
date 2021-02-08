@@ -9,6 +9,6 @@ export class LoadAllStyleRepository {
     @InjectModel(Style.name) private readonly styleModel: Model<StyleDocument>,
   ) {}
   async loadAll(): Promise<Array<Style>> {
-    return await this.styleModel.find();
+    return await this.styleModel.find({}, { __v: false });
   }
 }
