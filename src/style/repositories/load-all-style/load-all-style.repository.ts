@@ -12,6 +12,7 @@ export class LoadAllStyleRepository {
   ) {}
   async loadAll(options: QueryOptions): Promise<ReturnPaginationReturnType> {
     const { offset, limit } = options;
+
     if (options.fields) {
       const results = await this.styleModel
         .find(
@@ -26,15 +27,14 @@ export class LoadAllStyleRepository {
         results,
         total: results.length,
       };
-    } else {
-      const results = await this.styleModel
-        .find({}, { __v: false })
-        .skip(Number(offset))
-        .limit(Number(limit));
-      return {
-        results,
-        total: results.length,
-      };
     }
+    const results = await this.styleModel
+      .find({}, { __v: false })
+      .skip(Number(offset))
+      .limit(Number(limit));
+    return {
+      results,
+      total: results.length,
+    };
   }
 }
