@@ -1,5 +1,5 @@
 import { Style } from '@/schemas/style.schema';
-import { LoadAllStyleService } from '@/style/services/load-all/load-all-style.service';
+import { LoadAllStyleService } from '@/style/services/load-all-style/load-all-style.service';
 import { Controller, Get } from '@nestjs/common';
 
 @Controller('style')

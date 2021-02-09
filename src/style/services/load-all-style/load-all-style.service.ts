@@ -1,5 +1,5 @@
 import { Style } from '@/schemas/style.schema';
-import { LoadAllStyleRepository } from '@/style/repositories/load-style/load-all-style.repository';
+import { LoadAllStyleRepository } from '@/style/repositories/load-all-style/load-all-style.repository';
 import { Injectable, NotFoundException } from '@nestjs/common';
 
 @Injectable()
