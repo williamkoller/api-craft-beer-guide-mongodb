@@ -10,6 +10,10 @@ import { AddStyleController } from '@/style/controllers/add-style/add-style.cont
 import { LoadStyleByNameRepository } from '@/style/repositories/load-style-by-name/load-style-by-name.repository';
 import { LoadStyleByNameService } from '@/style/services/load-style-by-name/load-style-by-name.service';
 import { LoadStyleByNameController } from '@/style/controllers/load-style-by-name/load-style-by-name.controller';
+import { UpdateStyleRepository } from '@/style/repositories/update-style/update-style.repository';
+import { UpdateStyleService } from '@/style/services/update-style/update-stype.service';
+import { LoadByIdRepository } from '@/style/repositories/load-by-id/load-by-id.repository';
+import { UpdateStyleController } from '@/style/controllers/update-style/update-style.controller';
 
 @Module({
   imports: [
@@ -27,11 +31,15 @@ import { LoadStyleByNameController } from '@/style/controllers/load-style-by-nam
     LoadAllStyleService,
     LoadStyleByNameRepository,
     LoadStyleByNameService,
+    UpdateStyleRepository,
+    UpdateStyleService,
+    LoadByIdRepository,
   ],
   controllers: [
     LoadAllStyleController,
     AddStyleController,
     LoadStyleByNameController,
+    UpdateStyleController,
   ],
 })
 export class StyleModule {}
